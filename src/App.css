@@ -1,38 +1,161 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Shantell+Sans&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  width: 100px;
+  margin-top: 10px;
+  height: 50px;
 }
-
+/* 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #15171e;
+  min-height: 50px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.menu div {
+  height: 30px;
+  width: 300px;
+  text-align: left;
+  align-content: center;
+  border: 1px solid #e7030b;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login button {
+  background-color: #e7030b;
+  color: white;
+  height: 30px;
+  width: 200px;
+  font-size: medium;
+  border-radius: 5px;
+  align-items: center;
+}
+.signup button {
+  background-color: #e7030b;
+  color: white;
+  height: 30px;
+  width: 200px;
+  font-size: medium;
+  border-radius: 5px;
+}
+
+.search-bar img {
+  height: 50px;
+  width: 100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  height: 40px;
+  width: 50vw;
+  font-size: medium;
+  border: 1px solid #e7030b;
+
+  border-radius: 10px;
+  color: white;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+.characters {
+  background-color: #e7030b;
+  color: white;
+  position: relative;
+  margin-top: 3rem;
+  padding: 10px;
+  margin: 3rem auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+}
+.characters img {
+  width: 200px;
+  height: 200px;
+  transition: 0.5s;
+}
+.characters:hover img {
+  transform: scale(1.1);
+}
+.characters .title {
+  text-align: center;
+  padding: 1rem;
+  font-size: 17px;
+}
+.characters::after,
+.characters::before {
+  content: "";
+  position: absolute;
+  background: #e7030b;
+  z-index: -1;
+}
+.characters::before {
+  bottom: -2em;
+  left: 0;
+  width: 75%;
+  height: 3em;
+}
+.characters::after {
+  bottom: -2em;
+  right: 0.9em;
+  width: 41%;
+  height: 5em;
+  transform: rotate(-38deg);
+  box-sizing: 1rem;
+}
+
+.comics {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+form input {
+  width: 420px;
+  height: 40px;
+  border: 1px solid #e7030b;
+  border-radius: 5px;
+  margin: 0 40px 20px 40px;
+  line-height: 19px;
+}
+
+.footer {
+  margin: 50px;
+  text-align: center;
 }
