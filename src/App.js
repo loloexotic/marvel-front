@@ -15,22 +15,22 @@ import Login from "./pages/Login";
 import Footer from "./components/Footer";
 
 function App() {
-  const [token, setToken] = useState(Cookies.get("token") || null);
-  const [id, setId] = useState(Cookies.get("id") || null);
+  // const [token, setToken] = useState(Cookies.get("token") || null);
+  // const [id, setId] = useState(Cookies.get("id") || null);
 
-  const handleTokenId = (token, id) => {
-    if (token && id) {
-      setToken(token);
-      setId(id);
-      Cookies.set("token", token, { expires: 5 });
-      Cookies.set("id", id, { expires: 5 });
-    } else {
-      setToken(null);
-      setId(null);
-      Cookies.remove("token");
-      Cookies.remove("id");
-    }
-  };
+  // const handleTokenId = (token, id) => {
+  //   if (token && id) {
+  //     setToken(token);
+  //     setId(id);
+  //     Cookies.set("token", token, { expires: 5 });
+  //     Cookies.set("id", id, { expires: 5 });
+  //   } else {
+  //     setToken(null);
+  //     setId(null);
+  //     Cookies.remove("token");
+  //     Cookies.remove("id");
+  //   }
+  // };
 
   return (
     <Router>
@@ -42,11 +42,11 @@ function App() {
         <Route path="/comics" element={<Comic />} />
         <Route
           path="/signup"
-          element={<Signup handleTokenId={handleTokenId} />}
+          element={<Signup /*handleTokenId={handleTokenId}*/ />}
         />
         <Route
           path="/login"
-          element={<Login handleTokenId={handleTokenId} />}
+          element={<Login /*handleTokenId={handleTokenId}*/ />}
         />
       </Routes>
       <Footer />

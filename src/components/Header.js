@@ -5,20 +5,14 @@ const Header = () => {
   // const [search, setSearch] = useState();
   return (
     <header className="App-header">
-      <div>
+      <Link to="/">
         <img src={logo} className="App-logo" alt="logo" />
-      </div>
+      </Link>
 
       <section className="menu">
-        <Link to="/">
-          <div>Personnage</div>
-        </Link>
-        <Link to="/comics">
-          <div>Comics</div>
-        </Link>
-        <Link to="/favoris">
-          <div>Favoris</div>
-        </Link>
+        <Link to="/">Personnage</Link>
+        <Link to="/comics">Comics</Link>
+        <Link to="/favoris">Favoris</Link>
       </section>
 
       <Link to="/signup">

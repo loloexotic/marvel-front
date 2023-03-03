@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+// import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,6 +13,7 @@ const Login = () => {
         email: email,
         password: password,
       });
+
       console.log(response.data);
     } catch (error) {
       console.log(error.response.data);
